@@ -4,6 +4,8 @@
       Count: {{ $store.state.count }}, is {{ evenOrOdd }}.
       <button @click="increment">+</button>
       <button @click="decrement">-</button>
+      <button @click="incrementIfOdd">Increment If Odd</button>
+      <button @click="incrementAsync">Increment Async</button>
     </div>
   </div>
 </template>
@@ -18,7 +20,9 @@ export default {
   ]),
   methods: mapActions([
     'increment',
-    'decrement'
+    'decrement',
+    'incrementIfOdd',
+    'incrementAsync'
   ])
 }
 </script>
