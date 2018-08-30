@@ -16,7 +16,14 @@ const mutations = {
   decrement: (state) => state.count--
 }
 
+const actions = {
+  increment({ commit }) { commit('increment') },
+  decrement({ commit }) { commit('decrement') }
+}
+
 export default new Vuex.Store({
   state,
-  getters
+  getters,
+  mutations,
+  actions
 })
