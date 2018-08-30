@@ -1,5 +1,9 @@
 <template>
-
+  <div class="container">
+    <div class="row">
+      Count: {{ $store.state.count }}
+    </div>
+  </div>
 </template>
 
 <script>
