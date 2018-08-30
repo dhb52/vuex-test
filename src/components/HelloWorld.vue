@@ -5,7 +5,7 @@
       <button @click="increment">+</button>
       <button @click="decrement">-</button>
       <button @click="incrementIfOdd">Increment If Odd</button>
-      <button @click="incrementAsync">Increment Async</button>
+      <button @click="incrementAsync" :disabled="btnDisabled">Increment Async</button>
     </div>
   </div>
 </template>
@@ -16,7 +16,8 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'HelloWorld',
   computed: mapGetters([
-    'evenOrOdd'
+    'evenOrOdd',
+    'btnDisabled'
   ]),
   methods: mapActions([
     'increment',
