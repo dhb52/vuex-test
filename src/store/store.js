@@ -14,26 +14,26 @@ const getters = {
 }
 
 const mutations = {
-  increment: (state) => state.count++,
-  decrement: (state) => state.count--,
-  disable_btn: (state) => { state.btnDisabled = true },
-  enable_btn: (state) => { state.btnDisabled = false },
+  INCREMENT: (state) => state.count++,
+  DECREMENT: (state) => state.count--,
+  DISABLE_BTN: (state) => { state.btnDisabled = true },
+  ENABLE_BTN: (state) => { state.btnDisabled = false },
 }
 
 const actions = {
-  increment({ commit }) { commit('increment') },
-  decrement({ commit }) { commit('decrement') },
+  increment({ commit }) { commit('INCREMENT') },
+  decrement({ commit }) { commit('DECREMENT') },
   incrementIfOdd({ commit, state }) {
     if (state.count % 2 === 1) {
-      commit('increment')
+      commit('INCREMENT')
     }
   },
   incrementAsync({ commit }) {
     return new Promise((respose, reject) => {
-      commit('disable_btn')
+      commit('DISABLE_BTN')
       setTimeout(() => {
-        commit('increment')
-        commit('enable_btn')
+        commit('INCREMENT')
+        commit('ENABLE_BTN')
       }, 3000)
     })
   }
